@@ -1,3 +1,4 @@
+//"use strict";
 // output
     //window.alert(); //popupbox
     //document.write(); //testing porpues
@@ -104,7 +105,7 @@
 
     // condition/   
     // relational/   
-    // comparisaon/ 
+    // comparison/ 
         // < > <= >= 10!=10 10=="10" 10 === "10" !==  10>20  // boolean expression
     //Logical
        // 10>20&&20>10  || !    0 0  0
@@ -196,7 +197,7 @@
 
         // Array and object
             // multiple elemetns store
-            // var arr=[500,80,70,10,20,30,40]; // index 0 1 2 3
+             //var arr=[10,20,30,40,500,80,70]; // index 0 1 2 3
             // var arr2=Array(1,2,3,4);
             // var arr3=[
             //     [10,20,30,
@@ -204,6 +205,7 @@
             //     ],
             //     [40,50,60],
             // ];
+
             // arr.splice(1,2,50,60,70);
             // arr.slice(1);
             // console.log(arr3.flat());
@@ -215,12 +217,13 @@
             // arr.pop();   // remove last
             // arr.shift(); // remove first
             // arr.unshift(5); // add first
-            // var newarr=arr.findIndex(res=>res >= 30);
+            //  var newarr=arr.find(res=>res > 30);
+            //  console.log(newarr);
             // console.log(Math.max(...arr));
             // console.log(arr.sort((a,b)=>a-b));
             
             // console.log(arr.join("*"));
-            // arr[arr.legnth]
+            //  arr[arr.legnth];
             // delete arr[0];
             // console.log(arr.concat(arr2));
             // arr.push(...arr2);
@@ -305,21 +308,21 @@
             {name:"Devika",age:28,class:13,mob:987566321},
         ];
 
-        students.forEach(item => {
-            // document.write(item.name+" - "+item.age+" - "+item.class+" - "+item.mob+"<br>");
-            row.innerHTML+=`
-                     <tr>
-                         <td>${item.name}</td>
-                         <td>${item.age}</td>
-                         <td>${item.class}</td>
-                         <td>${item.mob}</td>
-                         <td>
-                             <button class="btn btn-warning">Edit</button>
-                             <button class="btn btn-danger">Delete</button>
-                         </td>
-                     </tr>
-                 `;
-        });
+        // students.forEach(item => {
+        //     // document.write(item.name+" - "+item.age+" - "+item.class+" - "+item.mob+"<br>");
+        //     row.innerHTML+=`
+        //              <tr>
+        //                  <td>${item.name}</td>
+        //                  <td>${item.age}</td>
+        //                  <td>${item.class}</td>
+        //                  <td>${item.mob}</td>
+        //                  <td>
+        //                      <button class="btn btn-warning">Edit</button>
+        //                      <button class="btn btn-danger">Delete</button>
+        //                  </td>
+        //              </tr>
+        //          `;
+        // });
 
         for (let item of students) {
             document.write(item.name+" - "+item.age+" - "+item.class+" - "+item.mob+"<br>");
@@ -330,17 +333,17 @@
         }
 
         // for (let i = 0; i < students.length; i++) {
-        //     // demo.innerHTML+=`
-        //     //  <div class="col">
-        //     //      <div class="card rounded shadow p-3 text-center bg-success-subtle">
-        //     //          <p clas="card-text">Name : ${students[i].name}</p>
-        //     //          <p clas="card-text">Age : ${students[i].age}</p>
-        //     //          <p clas="card-text">Class : ${students[i].class}</p>
-        //     //          <p clas="card-text">Mobile : ${students[i].mob}</p>
-        //     //          </div>
-        //     //      </div>
-        //     //  </div>
-        //     //  `;
+            // demo.innerHTML+=`
+            //  <div class="col">
+            //      <div class="card rounded shadow p-3 text-center bg-success-subtle">
+            //          <p clas="card-text">Name : ${students[i].name}</p>
+            //          <p clas="card-text">Age : ${students[i].age}</p>
+            //          <p clas="card-text">Class : ${students[i].class}</p>
+            //          <p clas="card-text">Mobile : ${students[i].mob}</p>
+            //          </div>
+            //      </div>
+            //  </div>
+            //  `;
 
         //     row.innerHTML+=`
         //         <tr>
@@ -362,12 +365,96 @@
             // console.log(student["age"]);
             
 
+        // Functions 
+            // Inbuild func
+            // User difined function
 
-
+        // function sum(num1,num2,...data) {
+        //     //  num1=parseInt(n1.value); // 
+        //     //  num2=parseInt(n2.value); // ["hi", 1, 2, "frog"].reduce((a, b) => a + b)
            
-            
+        //     return num1+num2+data.reduce((a,b)=>a+b);
+        // }
+        //      result.innerHTML= sum(100,100,100,100,100);
 
+        //      var x=10;
+        //      var y=20;
+
+        //      function change(o,p) {
+        //         o=20;
+        //         p=30;
+        //      }
+
+
+        //      change(10,20);
+
+        function Sum() {
+            return 10+20;
+        }
+        Sum();
+
+        var Add=function () {
+            return 10+20;
+        }
+        Add();
+
+        var Diff=() =>{
+            return 20-10;
+        }
+        Diff();
+
+        var Mult= data => data+10; 
+
+        function hi(data) {
+            return ()=>{
+                
+            }
+        }
+
+
+      
        
+
+        var res=Mult(30);
+       console.log(res);
+       
+       (()=>{
+        //    alert("In");
+        })(); // 
+        
+        // alert("Out");
+        //z=10;
+        import  ExternalSum ,{message} from "./data.js";
+
+        console.log(ExternalSum());
+        console.log(message);
+
+        // Math 
+        console.log(Math.PI);
+        console.log(Math.pow(10,2));
+        console.log(Math.random()*100);
+        console.log(Math.min(10,20,3,20));
+        console.log(Math.max(10,20,3,20));
+        console.log(Math.sqrt(25));
+        console.log(Math.round(5.5));
+        console.log(Math.ceil(5.5));
+        console.log(Math.floor(5.9));
+
+
+        // Math ✔
+        // Date
+        // Timing func
+        // REguExpres
+        // Exception handling
+        // Set
+        // Map
+        // Set
+        // modules ✔
+        // json
+        // promises
+        // filter
+        // addEventListener
+
 
 // work 1
     // var arr1=["PHP","JAVA","PYTHON"];
